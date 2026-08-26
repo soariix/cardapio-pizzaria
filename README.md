@@ -30,7 +30,3 @@ npm install
 ng serve
 \`\`\`
 Acesse `http://localhost:4200`
-
-## Prints
-
-*(adicione screenshots do cardápio funcionando aqui)*
