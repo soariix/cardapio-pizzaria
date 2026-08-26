@@ -1,0 +1,13 @@
+:root {
+  --cor-primaria: #C1272D;    // vermelho molho de tomate
+  --cor-secundaria: #F4A300;  // amarelo queijo
+  --cor-fundo: #FFF8F0;       // creme, remete à massa
+  --cor-texto: #2B2118;       // marrom escuro
+  --cor-sucesso: #4CAF50;     // verde WhatsApp
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Poppins', sans-serif;
+}

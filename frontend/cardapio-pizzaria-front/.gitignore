@@ -1,0 +1,10 @@
+backend/target/
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/bin/
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+.DS_Store
+*.log

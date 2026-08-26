@@ -1,0 +1,13 @@
+<div class="cardapio">
+  <h1> Cardápio</h1>
+
+  @if (carregando) {
+    <p>Carregando...</p>
+  } @else {
+    <div class="grid">
+      @for (produto of produtos; track produto.id) {
+          <app-produto-card [produto]="produto"></app-produto-card>
+      }
+    </div>
+  }
+</div>

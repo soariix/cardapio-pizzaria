@@ -1,0 +1,9 @@
+<div class="card">
+  @if (produto.imagemUrl) {
+    <img [src]="produto.imagemUrl" [alt]="produto.nome" />
+  }
+  <h3>{{ produto.nome }}</h3>
+  <p>{{ produto.descricao }}</p>
+  <span class="preco">R$ {{ produto.preco.toFixed(2) }}</span>
+  <button (click)="pedirPeloWhatsapp()">Pedir pelo WhatsApp</button>
+</div>
