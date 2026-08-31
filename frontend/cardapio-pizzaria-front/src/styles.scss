@@ -4,10 +4,22 @@
   --cor-fundo: #FFF8F0;       // creme, remete à massa
   --cor-texto: #2B2118;       // marrom escuro
   --cor-sucesso: #4CAF50;     // verde WhatsApp
+  --sombra: 0 4px 12px rgba(0,0,0,0.08);
+  --sombra-hover: 0 8px 20px rgba(0,0,0,0.12);
+  --raio: 14px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
+  font-family: 'Munito', sans-serif;
+}
+
+h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
 }

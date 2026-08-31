@@ -1,0 +1,33 @@
+﻿services:
+
+  banco:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: pizzaria_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - dados_pizzaria:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend/cardapio-pizzaria-back
+    depends_on:
+      - banco
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://banco:5432/pizzaria_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend/cardapio-pizzaria-front
+    depends_on:
+      - backend
+    ports:
+      - "4200:80"
+
+volumes:
+  dados_pizzaria:
